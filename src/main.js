@@ -6,7 +6,7 @@ async function fetchBorderData() {
     waitTimesDiv.innerHTML = "Obteniendo datos...";
 
     try {
-        const response = await fetch("https://bwt.cbp.gov/api/waittimes");
+        const response = await fetch("https://api.allorigins.win/raw?url=https://bwt.cbp.gov/api/waittimes");
         const data = await response.json();
 
         if (!Array.isArray(data)) {
